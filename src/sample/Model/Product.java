@@ -10,8 +10,7 @@ public class Product {
     private static final String FILENAME = "Product.csv";
     private String productID, name, description, brand, country;
     private double price;
-    private int temperature, weight;
-    private char size;
+    private int temperature, weight, size;
     private Date date;
     private ArrayList<String> images;
 
@@ -24,6 +23,8 @@ public class Product {
         if (!productID.matches("^(FD|BV|PM)\\d{5}$")) throw new IllegalArgumentException("Invalid product ID: " + productID);
         char us = Character.toUpperCase(size); // just in case
         if (us != 'S' && us != 'M' && us != 'L') throw new IllegalArgumentException("Invalid size (S|M|L): " + us);
+        int usi;
+        if (us == 'S') usi = 1; else if (us == 'M') usi = 2; else usi = 4;
         for (String i: images) if (!i.matches("^"+productID+"-\\d+\\.jpg$")) throw new IllegalArgumentException("Invalid image: " + i);
         this.productID = productID;
         this.name = name;
@@ -31,7 +32,7 @@ public class Product {
         this.brand = brand;
         this.price = price;
         this.temperature = temperature;
-        this.size = us;
+        this.size = usi;
         this.country = country;
         this.weight = weight;
         this.images = images;
@@ -129,6 +130,11 @@ public class Product {
     }
 
     public char getSize() {
+        char[] c = {' ','S','M',' ','L'};
+        return c[size];
+    }
+
+    public int getIntSize() {
         return size;
     }
 

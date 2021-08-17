@@ -14,6 +14,10 @@ public class Inventory {
     public static void loadInventoryDB() {
         try {
             inventoryList = new ArrayList<>();
+            productCategories = new ArrayList<>();
+            productCategories.add("Food");
+            productCategories.add("Beverage");
+            productCategories.add("Pharmacy");
             BufferedReader br = new BufferedReader(new FileReader(FILENAME));
             String s;
             do {
@@ -88,5 +92,13 @@ public class Inventory {
     public static int find(String productID) {
         for (ArrayList<Object> i: inventoryList) if (((Product)i.get(0)).getProductID().equals(productID)) return (int)i.get(1);
         throw new IllegalArgumentException("Product not found: " + productID);
+    }
+
+    public static ArrayList<String> getProductCategories() {
+        return productCategories;
+    }
+
+    public static ArrayList<ArrayList<Object>> getInventoryList() {
+        return inventoryList;
     }
 }
