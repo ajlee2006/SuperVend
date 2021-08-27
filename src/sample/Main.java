@@ -5,14 +5,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.Model.Security;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("View/sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Security.loadSecurityDB();
+        Parent root = FXMLLoader.load(getClass().getResource("View/login.fxml"));
+        primaryStage.setTitle("SuperVend - Login");
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 

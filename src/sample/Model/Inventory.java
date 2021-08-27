@@ -59,6 +59,7 @@ public class Inventory {
             thing.add(quantity);
             inventoryList.add(thing);
         }
+        writeInventoryDB();
     }
 
     public static void delete(String productID, int quantity) {
@@ -72,6 +73,7 @@ public class Inventory {
             else i.add(io-quantity);
             found = true;
         } if (!found) throw new IllegalArgumentException("No product to remove: " + productID + " " + quantity);
+        writeInventoryDB();
     }
 
     public static void updateQuantity(String productID, int quantity) {
@@ -87,6 +89,7 @@ public class Inventory {
             thing.add(quantity);
             inventoryList.add(thing);
         }
+        writeInventoryDB();
     }
 
     public static int find(String productID) {

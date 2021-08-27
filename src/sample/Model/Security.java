@@ -6,6 +6,7 @@ import java.io.*;
 public class Security {
     private static ArrayList<Security> securityList;
     private static final String FILENAME = "Login.csv";
+    private static Security currentUser;
     private String userID, password;
 
     public Security(String userID, String password) {
@@ -50,8 +51,15 @@ public class Security {
         if (!validPassword(password)) throw new IllegalArgumentException("Invalid password: " + password);
         Security user = find(userID);
         if (user == null) return false;
-        if (user.getPassword().equals(password)) return true;
+        if (user.getPassword().equals(password)) {
+            currentUser = user;
+            return true;
+        }
         return false;
+    }
+
+    public static void logOut() {
+        currentUser = null;
     }
 
     public static boolean validUserID(String userID) {
@@ -65,5 +73,9 @@ public class Security {
     public static Security find(String userID) {
         for (Security i: securityList) if (i.getUserID().equals(userID)) return i;
         throw new IllegalArgumentException("User does not exist: " + userID);
+    }
+
+    public static Security getCurrentUser() {
+        return currentUser;
     }
 }

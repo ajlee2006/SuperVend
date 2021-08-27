@@ -22,6 +22,7 @@ public class ShoppingCart {
     }
 
     public void add(Product p) {
+        if (shoppingCart.size() == 10) throw new IllegalArgumentException("Shopping cart cannot be increased due to max size (10)");
         shoppingCart.add(p);
     }
 
@@ -40,16 +41,20 @@ public class ShoppingCart {
     }
 
     public ArrayList<ArrayList<Product>> bagging() {
+        shoppingCart.sort((o1, o2) -> o1.getTemperature() - o2.getTemperature());
         ArrayList<ArrayList<Product>> aa = new ArrayList<>();
         ArrayList<Product> a = new ArrayList<>();
+        Product past = shoppingCart.get(0);
         for (Product i: shoppingCart) {
             int s = 0;
             for (Product j: a) s += j.getIntSize();
-            if (s + i.getIntSize() > 8) {
+            if (s + i.getIntSize() > 8 ||
+                    (i.getTemperature()<0 && past.getTemperature()>=0) || (i.getTemperature()<20 && past.getTemperature()>=20)) {
                 aa.add(a);
                 a = new ArrayList<>();
             }
             a.add(i);
+            past = i;
         }
         return aa;
     }

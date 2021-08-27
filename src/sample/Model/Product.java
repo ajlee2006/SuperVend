@@ -146,4 +146,23 @@ public class Product {
     public ArrayList<String> getImages() {
         return images;
     }
+
+    public boolean isFood() {
+        return productID.startsWith("FD");
+    }
+
+    public boolean isBeverage() {
+        return productID.startsWith("BV");
+    }
+
+    public boolean isPharmacy() {
+        return productID.startsWith("PM");
+    }
+
+    public int type() {
+        if (isFood()) return 0;
+        if (isBeverage()) return 1;
+        if (isPharmacy()) return 2;
+        throw new IllegalArgumentException("Product is not food, beverage or pharmacy");
+    }
 }
