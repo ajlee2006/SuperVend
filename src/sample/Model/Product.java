@@ -64,6 +64,10 @@ public class Product {
 
     @Override
     public String toString() {
+        StringBuilder imgString = new StringBuilder();
+        for (String i: images) {
+            imgString.append(i).append(",");
+        } imgString = new StringBuilder(imgString.substring(0, imgString.length() - 1));
         return  productID + ',' +
                 name + ',' +
                 description + ',' +
@@ -74,7 +78,7 @@ public class Product {
                 weight + ',' +
                 size + ',' +
                 getDate() + ',' +
-                images;
+                imgString;
     }
 
     public static void writeProductDB() {
@@ -83,6 +87,7 @@ public class Product {
             for (Product i: productList) {
                 pw.println(i.toString());
             }
+            pw.close();
         } catch (Exception e) {
             throw new IllegalArgumentException("Writing product database failed");
         }

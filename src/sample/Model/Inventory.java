@@ -26,12 +26,12 @@ public class Inventory {
                     String[] tokens = s.split(",");
                     ArrayList<Object> thing = new ArrayList<>();
                     thing.add(Product.find(tokens[1]));
-                    thing.add(tokens[2]);
+                    thing.add(Integer.parseInt(tokens[2]));
                     inventoryList.add(thing);
                 }
             } while (s != null);
         } catch (Exception e) {
-            throw new IllegalArgumentException("Loading inventory database failed");
+            throw new IllegalArgumentException("Loading inventory database failed: " + e.getMessage());
         }
     }
 
@@ -41,6 +41,7 @@ public class Inventory {
             for (ArrayList<Object> i: inventoryList) {
                 pw.println(((Product)i.get(0)).getProductID().substring(0,2) + "," + ((Product)i.get(0)).getProductID() + "," + i.get(1));
             }
+            pw.close();
         } catch (Exception e) {
             throw new IllegalArgumentException("Writing product database failed");
         }
@@ -65,13 +66,17 @@ public class Inventory {
     public static void delete(String productID, int quantity) {
         boolean found = false;
         Product p = Product.find(productID);
-        for (ArrayList<Object> i: inventoryList) if (!found && ((Product)i.get(0)).getProductID().equals(productID)) {
-            Object o = i.remove(1);
-            int io = (int)o;
-            if (quantity > io) throw new IllegalArgumentException("Not enough product to remove: " + productID + " " + quantity);
-            if (quantity == io) inventoryList.remove(i);
-            else i.add(io-quantity);
-            found = true;
+        int in = 0;
+        for (ArrayList<Object> i: inventoryList) {
+            if (!found && ((Product)i.get(0)).getProductID().equals(productID)) {
+                Object o = i.remove(1);
+                int io = (int)o;
+                if (quantity > io) throw new IllegalArgumentException("Not enough product to remove: " + productID + " " + quantity);
+                if (quantity == io) inventoryList.remove(in);
+                else i.add(io-quantity);
+                found = true;
+                break;
+            } in++;
         } if (!found) throw new IllegalArgumentException("No product to remove: " + productID + " " + quantity);
         writeInventoryDB();
     }

@@ -15,7 +15,7 @@
     <children>
             <VBox layoutX="8.0" layoutY="6.0" prefHeight="282.0" prefWidth="285.0">
                 <children>
-                  <ImageView fitHeight="164.0" fitWidth="285.0" pickOnBounds="true">
+                  <ImageView fx:id="imageView" fitHeight="164.0" fitWidth="285.0" pickOnBounds="true">
                       <image>
                           <Image url="@Untitled%20-%20Paint.jpeg" />
                       </image>

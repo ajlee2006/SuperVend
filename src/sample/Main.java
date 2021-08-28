@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.Controller.AdminController;
+import sample.Controller.LoginController;
 import sample.Model.Security;
 
 public class Main extends Application {
@@ -12,7 +14,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Security.loadSecurityDB();
-        Parent root = FXMLLoader.load(getClass().getResource("View/login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("View/login.fxml"));
+        Parent root = loader.load();
+        LoginController loginController = loader.getController();
+        loginController.initialise();
         primaryStage.setTitle("SuperVend - Login");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

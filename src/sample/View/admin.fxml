@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AdminController">
+    <children>
+            <VBox layoutX="8.0" layoutY="6.0" prefHeight="387.0" prefWidth="285.0">
+                <children>
+                    <Label text="Admin" />
+            <HBox prefHeight="12.0" prefWidth="285.0">
+               <children>
+                          <TextField fx:id="textfieldUsername" promptText="Enter new filename" />
+                  <Button mnemonicParsing="false" text="Change logo" />
+               </children>
+            </HBox>
+            <HBox prefHeight="12.0" prefWidth="285.0">
+               <children>
+                  <TextField fx:id="textfieldUsername1" promptText="Enter new filename" />
+                  <Button mnemonicParsing="false" text="Change video" />
+               </children>
+            </HBox>
+            <TreeView prefHeight="247.0" prefWidth="285.0" />
+            <HBox prefHeight="12.0" prefWidth="285.0">
+               <children>
+                  <TextField prefHeight="27.0" prefWidth="116.0" promptText="Item no." />
+                  <Button mnemonicParsing="false" text="Load" />
+                  <Button mnemonicParsing="false" text="Delete" />
+                  <Button mnemonicParsing="false" text="Cancel" />
+               </children>
+            </HBox>
+            <Label prefHeight="127.0" prefWidth="285.0" text="Comma-separated product ID, name, description, brand, price, storage temperature, size, country of origin, expiry date, net weight, image list." wrapText="true" />
+            <HBox prefHeight="16.0" prefWidth="285.0">
+               <children>
+                  <TextField promptText="See above" />
+                  <Button mnemonicParsing="false" text="Edit" />
+                  <Button mnemonicParsing="false" text="Add new" />
+               </children>
+            </HBox>
+            <HBox prefHeight="23.0" prefWidth="285.0">
+               <children>
+                  <TextField prefHeight="27.0" prefWidth="89.0" promptText="Stock level" />
+                  <Button mnemonicParsing="false" text="Update stock" />
+               </children>
+            </HBox>
+                </children>
+            </VBox>
+    </children>
+</AnchorPane>

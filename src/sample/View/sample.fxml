@@ -36,7 +36,7 @@
                <children>
                   <VBox fx:id="vboxLeftSide" prefHeight="554.0" prefWidth="371.0">
                      <children>
-                        <ImageView fx:id="logo" fitHeight="107.0" fitWidth="401.0" pickOnBounds="true" smooth="false">
+                        <ImageView fx:id="imageView" fitHeight="107.0" fitWidth="401.0" pickOnBounds="true" smooth="false">
                            <image>
                               <Image url="@Untitled%20-%20Paint.jpeg" />
                            </image>
@@ -52,15 +52,17 @@
                         <Separator prefHeight="16.0" prefWidth="340.0" />
                         <VBox fx:id="vboxLeftStuff" prefHeight="369.0" prefWidth="401.0">
                            <children>
-                              <Label fx:id="labelRentalCart" text="Shopping cart (0 items):" />
-                              <TreeView fx:id="shoppingCart" prefHeight="214.0" prefWidth="401.0" />
-                              <Label text="Remove item: (do i need this)" />
-                              <HBox />
-                              <TextField fx:id="textfieldRemoveFromCart" prefHeight="27.0" prefWidth="63.0" promptText="Item No." />
-                              <Button fx:id="buttonRemoveFromCart" mnemonicParsing="false" onAction="#removeFromCart" text="Remove" />
-                              <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#clearCart" text="Clear shopping cart" />
+                              <TreeView fx:id="shoppingCart" prefHeight="277.0" prefWidth="401.0" />
+                              <Label text="Remove item:" />
+                              <HBox>
+                                 <children>
+                                    <TextField fx:id="textfieldRemoveFromCart" prefHeight="27.0" prefWidth="90.0" promptText="Item No." />
+                                    <Button fx:id="buttonRemoveFromCart" mnemonicParsing="false" onAction="#removeFromCart" text="Remove" />
+                                    <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#clearCart" text="Clear shopping cart" />
+                                 </children>
+                              </HBox>
                               <Separator prefHeight="26.0" prefWidth="340.0" />
-                              <Button fx:id="buttonCheckout" mnemonicParsing="false" onAction="#checkout" text="Checkout rental cart" />
+                              <Button fx:id="buttonCheckout" mnemonicParsing="false" onAction="#checkout" text="Checkout" />
                            </children>
                         </VBox>
                      </children>
@@ -73,7 +75,7 @@
                               <HBox prefHeight="13.0" prefWidth="546.0">
                                  <children>
                                     <TextField fx:id="textfieldItemNo" prefHeight="27.0" prefWidth="67.0" promptText="Item No." />
-                                    <Button fx:id="buttonViewImages" mnemonicParsing="false" text="View images" />
+                                    <Button fx:id="buttonViewImages" mnemonicParsing="false" onAction="#viewImages" text="View images" />
                                     <Button fx:id="buttonChoose" mnemonicParsing="false" onAction="#addToCart" text="Add to shopping cart" />
                                  </children>
                               </HBox>

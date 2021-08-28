@@ -9,8 +9,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import sample.Model.*;
+
+import static javafx.scene.input.KeyCode.ENTER;
 
 public class LoginController {
     @FXML
@@ -21,6 +25,44 @@ public class LoginController {
     private Button buttonLogin;
     @FXML
     private Button buttonExit;
+    @FXML
+    private ImageView imageView;
+    private static String filename = "Untitled - Paint.jpeg";
+
+    public void initialise() {
+        try {
+            imageView.setImage(new Image(filename));
+        } catch (Exception d) {
+            filename = "Untitled - Paint.jpeg";
+            try {
+                imageView.setImage(new Image(filename));
+            } catch (Exception e) {
+                filename = "Untitled - Paint.jpeg";
+                e.printStackTrace();
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Error!");
+                alert.setContentText(e.getMessage());
+                alert.showAndWait();
+            }
+        }
+        try {
+            textfieldPassword.setOnKeyPressed(e -> {
+                if (e.getCode() == ENTER) login(new ActionEvent());
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Error!");
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+        }
+    }
+
+    public static void setFilename(String s) {
+        filename = s;
+    }
 
     @FXML
     public void login(ActionEvent event) {
