@@ -41,11 +41,7 @@ public class ShoppingCart {
     }
 
     public ArrayList<ArrayList<Product>> bagging() {
-        shoppingCart.sort((o1, o2) -> {
-            if (o1.getTemperature() == o2.getTemperature())
-                return o1.getIntSize() - o2.getIntSize();
-            return o1.getTemperature() - o2.getTemperature();
-        });
+        shoppingCart.sort(new ProductSort());
         ArrayList<ArrayList<Product>> aa = new ArrayList<>();
         ArrayList<Product> a = new ArrayList<>();
         Product past = shoppingCart.get(0);

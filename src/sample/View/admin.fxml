@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,40 +13,45 @@
     <children>
             <VBox layoutX="8.0" layoutY="6.0" prefHeight="387.0" prefWidth="285.0">
                 <children>
-                    <Label text="Admin" />
-            <HBox prefHeight="12.0" prefWidth="285.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="9.0" prefWidth="285.0">
                <children>
-                          <TextField fx:id="textfieldUsername" promptText="Enter new filename" />
-                  <Button mnemonicParsing="false" text="Change logo" />
+                          <Label text="Admin   " />
+                  <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#logout" text="Log out" />
                </children>
             </HBox>
             <HBox prefHeight="12.0" prefWidth="285.0">
                <children>
-                  <TextField fx:id="textfieldUsername1" promptText="Enter new filename" />
-                  <Button mnemonicParsing="false" text="Change video" />
+                          <TextField fx:id="textfieldLogo" promptText="Enter new filename" />
+                  <Button fx:id="buttonLogo" mnemonicParsing="false" onAction="#changeLogo" text="Change logo" />
                </children>
             </HBox>
-            <TreeView prefHeight="247.0" prefWidth="285.0" />
             <HBox prefHeight="12.0" prefWidth="285.0">
                <children>
-                  <TextField prefHeight="27.0" prefWidth="116.0" promptText="Item no." />
-                  <Button mnemonicParsing="false" text="Load" />
-                  <Button mnemonicParsing="false" text="Delete" />
-                  <Button mnemonicParsing="false" text="Cancel" />
+                  <TextField fx:id="textfieldVideo" promptText="Enter new filename" />
+                  <Button fx:id="buttonVideo" mnemonicParsing="false" onAction="#changeVideo" text="Change video" />
                </children>
             </HBox>
-            <Label prefHeight="127.0" prefWidth="285.0" text="Comma-separated product ID, name, description, brand, price, storage temperature, size, country of origin, expiry date, net weight, image list." wrapText="true" />
-            <HBox prefHeight="16.0" prefWidth="285.0">
+            <TreeView fx:id="treeView" prefHeight="147.0" prefWidth="285.0" />
+            <HBox prefHeight="12.0" prefWidth="285.0">
                <children>
-                  <TextField promptText="See above" />
-                  <Button mnemonicParsing="false" text="Edit" />
-                  <Button mnemonicParsing="false" text="Add new" />
+                  <TextField fx:id="textfieldItem" prefHeight="27.0" prefWidth="116.0" promptText="Item no." />
+                  <Button fx:id="buttonLoad" mnemonicParsing="false" onAction="#load" text="Load" />
+                  <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#delete" text="Delete" />
+                  <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
                </children>
             </HBox>
-            <HBox prefHeight="23.0" prefWidth="285.0">
+            <Label prefHeight="127.0" prefWidth="285.0" text="Comma-separated product ID, name, description, brand, price, storage temperature, size, country of origin, expiry date, net weight, image list:" wrapText="true" />
+            <TextArea fx:id="textareaCSV" prefHeight="137.0" prefWidth="285.0" wrapText="true" />
+            <HBox fx:id="hboxEdit" prefHeight="16.0" prefWidth="285.0">
                <children>
-                  <TextField prefHeight="27.0" prefWidth="89.0" promptText="Stock level" />
-                  <Button mnemonicParsing="false" text="Update stock" />
+                  <Button fx:id="buttonEdit" mnemonicParsing="false" onAction="#edit" text="Edit" />
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#add" text="Add new" />
+               </children>
+            </HBox>
+            <HBox fx:id="hboxUpdate" prefHeight="23.0" prefWidth="285.0">
+               <children>
+                  <TextField fx:id="textfieldStock" prefHeight="27.0" prefWidth="89.0" promptText="Stock level" />
+                  <Button fx:id="buttonStock" mnemonicParsing="false" onAction="#updateStock" text="Update stock" />
                </children>
             </HBox>
                 </children>

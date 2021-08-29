@@ -98,6 +98,16 @@ public class Product {
         throw new IllegalArgumentException("Product does not exist: " + productID);
     }
 
+    public static void delete(Product p) {
+        productList.remove(p);
+        writeProductDB();
+    }
+
+    public static void add(Product p) {
+        productList.add(p);
+        writeProductDB();
+    }
+
     public static ArrayList<Product> getProductList() {
         return productList;
     }

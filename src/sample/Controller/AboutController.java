@@ -37,7 +37,16 @@ public class AboutController {
             mediaView.setMediaPlayer(mediaPlayer);
             mediaView.setFitWidth(480);
         } catch (Exception e) {
-            throw new IllegalArgumentException("Loading video failed: " + e.getMessage());
+            try {
+                Media media = new Media(new File("Dove.mp4").toURI().toString());
+                MediaPlayer mediaPlayer = new MediaPlayer(media);
+                mediaPlayer.setAutoPlay(true);
+                mediaPlayer.setCycleCount(-1);
+                mediaView.setMediaPlayer(mediaPlayer);
+                mediaView.setFitWidth(480);
+            } catch (Exception f) {
+                throw new IllegalArgumentException("Loading video failed: " + e.getMessage());
+            }
         }
     }
 

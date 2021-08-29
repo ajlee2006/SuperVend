@@ -68,6 +68,10 @@ public class Controller {
     private ShoppingCart cart;
     private static String filename = "Untitled - Paint.jpeg";
 
+    public static void setFilename(String s) {
+        filename = s;
+    }
+
     public void initialise() {
         labelLoggedInAs.setText("Logged in as " + Security.getCurrentUser().getUserID() + "   ");
         vboxLeftStuff.setDisable(true);
@@ -299,7 +303,7 @@ public class Controller {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("AirBooks - Login");
+            stage.setTitle("SuperVend - Login");
             stage.show();
         } catch (Exception e) {
             alertError(e);

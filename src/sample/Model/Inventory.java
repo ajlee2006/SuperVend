@@ -99,7 +99,7 @@ public class Inventory {
 
     public static int find(String productID) {
         for (ArrayList<Object> i: inventoryList) if (((Product)i.get(0)).getProductID().equals(productID)) return (int)i.get(1);
-        throw new IllegalArgumentException("Product not found: " + productID);
+        return 0;
     }
 
     public static ArrayList<String> getProductCategories() {
