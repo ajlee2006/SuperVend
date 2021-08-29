@@ -1,24 +1,23 @@
-FD12345,Curry Instant Noodle,Fast noodle with curry,Maggie,1.80,25,M,Malaysia,17-01-2022,500,FD12345-1.jpg,FD12345-2.jpg
-BV01122,Milo Instant Mix,Fast chocolate drink,Nestle,5.20,23,M,Australia,23-04-2023,250,BV01122-1.jpg,BV01122-2.jpg
-PM00056,Panadol Extra,Medicine for pain,GlaxoSmithKline,7.50,24,S,United Kingdom,09-08-2022,50,PM00056-1.jpg,PM00056-2.jpg,PM00056-3.jpg
-FD10012,Ice Cream,Cold food,Haagen Dazs,25.90,0,S,United States,22-03-2022,100,FD10012-1.jpg,FD10012-2.jpg
-FD00015,Watermelon,Fruit traffic light colour,Dragon Brand,6.20,22,L,Thailand,22-08-2021,800,FD00015-1.jpg
-PM00081,COVID-19 Test Kit,Test for death,Abbot,15.90,24,M,United States,15-07-2023,80,PM00081-1.jpg,PM00081-2.jpg
-FD00001,Ice Cream,Cold food,Magnum,0.50,25,M,Singapore,01-01-9999,500,FD00001-1.jpg,FD00001-2.jpg
-FD00002,Ice Cream,Cold food,Ben and Jerry,1,0,L,Singapore,01-01-9999,500,FD00002-1.jpg,FD00002-2.jpg
-FD00003,Beef Cubes,Cubes of beef,Chef Delights,1,-50,S,Singapore,01-01-9999,500,FD00003-1.jpg,FD00003-2.jpg
-FD00004,Chicken wings,Wings of bird,CP,1,500,M,Singapore,01-01-9999,500,FD00004-1.jpg,FD00004-2.jpg
-FD00005,Pineapple,Not an apple,A farmer somewhere,1,69,L,Singapore,01-01-9999,500,FD00005-1.jpg
-BV00001,Coke,Health supplement drink,Coke,0.50,25,S,Singapore,01-01-9999,500,BV00001-1.jpg,BV00001-2.jpg
-BV00002,Milk,Cow juice,Meiji,0.50,-273,M,Singapore,01-01-9999,500,BV00002-1.jpg,BV00002-2.jpg
-BV00003,Milk,Cow juice,Meadow,0.50,100000,L,Singapore,01-01-9999,500,BV00003-1.jpg,BV00003-2.jpg
-BV00004,Milk,Cow juice,Marigold,1,420,S,Singapore,01-01-9999,500,BV00004-1.jpg,BV00004-2.jpg
-BV00005,Expensive Water,Water but branded,Evian,0.50,-100000,M,Singapore,01-01-9999,500,BV00005-1.jpg
-BV00006,Green Tea,Caffeine with other stuff,Pokka,0.50,25,L,Singapore,01-01-9999,500,BV00006-1.jpg
-BV00007,Hand Sanitiser,Description,Purrel,0.50,25,M,Singapore,01-01-9999,500,BV00007-1.jpg,BV00007-2.jpg
-PM00001,Balm,Heal wounds or something,Tiger,0.50,25,S,Singapore,01-01-9999,500,PM00001-1.jpg,PM00001-2.jpg
-PM00002,Mask,Disposable,Inherent,0.50,25,M,Singapore,01-01-9999,500,PM00002-1.jpg,PM00002-2.jpg
-PM00003,Gloves,Latex,A1,0.50,25,L,Singapore,01-01-9999,500,PM00003-1.jpg,PM00003-2.jpg
-PM00004,Medicated Axe,Not from River Valley,Oil Brand,0.50,25,S,Singapore,01-01-9999,500,PM00004-1.jpg
-PM00005,Mask,Three M,MMM,0.50,25,M,Singapore,01-01-9999,500,PM00005-1.jpg
-PM00006,Lettuce,Medicine,Pharmaceutical company,0.50,25,L,Singapore,01-01-9999,500,PM00006-1.jpg,PM00006-2.jpg
+FD12345,Curry Instant Noodle,Fast noodle with curry,Maggie,Malaysia,1.8,25,500,2,17-01-2022,FD12345-1.jpg,FD12345-2.jpg
+BV01122,Milo Instant Mix,Fast chocolate drink,Nestle,Australia,5.2,23,250,2,23-04-2023,BV01122-1.jpg,BV01122-2.jpg
+PM00056,Panadol Extra,Medicine for pain,GlaxoSmithKline,United Kingdom,7.5,24,50,1,09-08-2022,PM00056-1.jpg,PM00056-2.jpg,PM00056-3.jpg
+FD10012,Ice Cream,Cold food,Haagen Dazs,United States,25.9,0,100,1,22-03-2022,FD10012-1.jpg,FD10012-2.jpg
+FD00015,Watermelon,Fruit traffic light colour,Dragon Brand,Thailand,6.2,22,800,4,22-08-2021,FD00015-1.jpg
+PM00081,COVID-19 Test Kit,Test for death,Abbot,United States,15.9,24,80,2,15-07-2023,PM00081-1.jpg,PM00081-2.jpg
+FD00001,Ice Cream,Cold food,Magnum,Singapore,0.5,25,500,2,01-01-9999,FD00001-1.jpg,FD00001-2.jpg
+FD00002,Ice Cream,Cold food,Ben and Jerry,Singapore,1.0,0,500,4,01-01-9999,FD00002-1.jpg,FD00002-2.jpg
+FD00003,Beef Cubes,Cubes of beef,Chef Delights,Singapore,1.0,-50,500,1,01-01-9999,FD00003-1.jpg,FD00003-2.jpg
+FD00004,Chicken wings,Wings of bird,CP,Singapore,1.0,500,500,2,01-01-9999,FD00004-1.jpg,FD00004-2.jpg
+FD00005,Pineapple,Not an apple,A farmer somewhere,Singapore,1.0,69,500,4,01-01-9999,FD00005-1.jpg
+BV00001,Coke,Health supplement drink,Coke,Singapore,0.5,25,500,1,01-01-9999,BV00001-1.jpg,BV00001-2.jpg
+BV00002,Milk,Cow juice,Meiji,Singapore,0.5,-273,500,2,01-01-9999,BV00002-1.jpg,BV00002-2.jpg
+BV00003,Milk,Cow juice,Meadow,Singapore,0.5,100000,500,4,01-01-9999,BV00003-1.jpg,BV00003-2.jpg
+BV00004,Milk,Cow juice,Marigold,Singapore,1.0,420,500,1,01-01-9999,BV00004-1.jpg,BV00004-2.jpg
+BV00005,Expensive Water,Water but branded,Evian,Singapore,0.5,-100000,500,2,01-01-9999,BV00005-1.jpg
+BV00006,Green Tea,Caffeine with other stuff,Pokka,Singapore,0.5,25,500,4,01-01-9999,BV00006-1.jpg
+BV00007,Hand Sanitiser,Description,Purrel,Singapore,0.5,25,500,2,01-01-9999,BV00007-1.jpg,BV00007-2.jpg
+PM00001,Balm,Heal wounds or something,Tiger,Singapore,0.5,25,500,1,01-01-9999,PM00001-1.jpg,PM00001-2.jpg
+PM00002,Mask,Disposable,Inherent,Singapore,0.5,25,500,2,01-01-9999,PM00002-1.jpg,PM00002-2.jpg
+PM00003,Gloves,Latex,A1,Singapore,0.5,25,500,4,01-01-9999,PM00003-1.jpg,PM00003-2.jpg
+PM00004,Medicated Axe,Not from River Valley,Oil Brand,Singapore,0.5,25,500,1,01-01-9999,PM00004-1.jpg
+PM00005,Mask,Three M,MMM,Singapore,0.5,25,500,2,01-01-9999,PM00005-1.jpg

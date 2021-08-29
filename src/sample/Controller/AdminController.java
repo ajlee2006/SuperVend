@@ -141,8 +141,8 @@ public class AdminController {
 
     public void delete(ActionEvent a) {
         Product p = Product.getProductList().get(Integer.parseInt(textfieldItem.getText()));
-        Product.delete(p);
         Inventory.delete(p.getProductID(),Inventory.find(p.getProductID()));
+        Product.delete(p);
         initialise();
     }
 
@@ -170,8 +170,8 @@ public class AdminController {
     public void edit(ActionEvent no) {
         try {
             Product p = Product.getProductList().get(Integer.parseInt(textfieldItem.getText()));
-            Product.delete(p);
             Inventory.delete(p.getProductID(),Inventory.find(p.getProductID()));
+            Product.delete(p);
             add(no);
         } catch (Exception e) {
             alertError(e);

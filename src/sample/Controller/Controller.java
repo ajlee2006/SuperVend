@@ -167,7 +167,7 @@ public class Controller {
                 tii.getChildren().add(new TreeItem<>("Description: " + p.getDescription()));
                 tii.getChildren().add(new TreeItem<>("Brand: " + p.getBrand()));
                 tii.getChildren().add(new TreeItem<>(String.format("Price: $%.2f", p.getPrice())));
-                tii.getChildren().add(new TreeItem<>("Storage temperature: " + p.getTemperature() + "degC"));
+                tii.getChildren().add(new TreeItem<>("Storage temperature: " + p.getTemperature() + "°C"));
                 tii.getChildren().add(new TreeItem<>("Size: " + p.getSize()));
                 tii.getChildren().add(new TreeItem<>("Country of origin: " + p.getCountry()));
                 tii.getChildren().add(new TreeItem<>("Expiry date: " + p.getDate()));
@@ -202,7 +202,7 @@ public class Controller {
             Inventory.add(product.getProductID(),1);
             loadAllItems();
             loadShoppingCart();
-            textfieldRemoveFromCart.getText();
+            textfieldRemoveFromCart.setText("");
         } catch (Exception e) {
             alertError(e);
         }
