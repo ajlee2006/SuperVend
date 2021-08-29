@@ -58,7 +58,7 @@ public class Product {
                 }
             } while (s != null);
         } catch (Exception e) {
-            throw new IllegalArgumentException("Loading product database failed");
+            throw new IllegalArgumentException("Loading product database failed: " + e.getMessage());
         }
     }
 
