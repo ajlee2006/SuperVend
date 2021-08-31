@@ -72,12 +72,12 @@ public class Product {
                 name + ',' +
                 description + ',' +
                 brand + ',' +
-                country + ',' +
                 price + ',' +
                 temperature + ',' +
-                weight + ',' +
-                size + ',' +
+                getSize() + ',' +
+                country + ',' +
                 getDate() + ',' +
+                weight + ',' +
                 imgString;
     }
 
